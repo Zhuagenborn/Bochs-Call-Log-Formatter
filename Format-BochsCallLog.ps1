@@ -33,10 +33,10 @@
 [CmdletBinding()]
 param (
     [Parameter(Mandatory)]
-    [ValidateNotNullOrEmpty()]
+    [ValidateNotNullOrWhiteSpace()]
     [string]$ModulePath,
 
-    [ValidateNotNullOrEmpty()]
+    [ValidateNotNullOrWhiteSpace()]
     [string]$LogPath
 )
 
@@ -47,7 +47,7 @@ param (
 function Import-Module {
     param (
         [Parameter(Mandatory)]
-        [ValidateNotNullOrEmpty()]
+        [ValidateNotNullOrWhiteSpace()]
         [string]$Path
     )
 
